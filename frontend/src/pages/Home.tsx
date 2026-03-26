@@ -144,7 +144,7 @@ const HomePage = () => {
                   to="/services"
                   className="group rounded-xl overflow-hidden border border-white/10 bg-[hsl(215_35%_18%)] hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_hsla(213,80%,42%,0.3)] h-full flex flex-col block"
                 >
-                  <dierflow-hidden">
+                  <div className="relative h-40 sm:h-44 overflow-hidden">
                     <img
                       src={service.img}
                       alt={service.title}

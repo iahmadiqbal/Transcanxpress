@@ -176,7 +176,7 @@ const HomePage = () => {
       {/* Why Choose Us */}
       <section className="section-padding section-light">
         <div className="container mx-auto">
-          <AniName="text-center mb-10 sm:mb-12">
+          <AnimatedSection direction="up" className="text-center mb-10 sm:mb-12">
             <p className="text-primary font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-2">Why Choose Us</p>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
               The Transcan Xpress Advantage

@@ -6,48 +6,43 @@
 
 @layer base {
   :root {
-    --background: 220 20% 10%;
-    --foreground: 0 0% 95%;
+    /* Blue, white, grey color scheme */
+    --background: 0 0% 100%;
+    --foreground: 215 30% 12%;
 
-    --card: 220 18% 14%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 12%;
 
-    --popover: 220 18% 14%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 12%;
 
-    --primary: 0 85% 50%;
+    --primary: 213 80% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 18%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 30% 12%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 15% 48%;
 
-    --accent: 0 85% 50%;
+    --accent: 213 80% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 0 85% 50%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 213 80% 42%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 220 20% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 0 85% 50%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 18%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 0 85% 50%;
+    /* Dark section = deep navy blue */
+    --section-dark-bg: 215 40% 14%;
+    /* Light section = near white with slight blue tint */
+    --section-light-bg: 210 25% 98%;
 
-    --hero-overlay: linear-gradient(to bottom, hsla(220, 20%, 10%, 0.7), hsla(220, 20%, 10%, 0.85));
-    --section-dark: 220 20% 8%;
-    --section-light: 220 18% 12%;
+    --hero-overlay: linear-gradient(to bottom, hsla(215, 60%, 8%, 0.60), hsla(215, 60%, 8%, 0.82));
   }
 }
 
@@ -60,7 +55,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 }
@@ -70,17 +70,75 @@
     @apply py-16 md:py-24 px-4 md:px-8;
   }
 
+  /* Dark sections: navy background, ALL text forced white */
   .section-dark {
-    background-color: hsl(var(--section-dark));
+    background-color: hsl(var(--section-dark-bg));
+    color: hsl(0 0% 95%);
   }
 
+  .section-dark h1,
+  .section-dark h2,
+  .section-dark h3,
+  .section-dark h4,
+  .section-dark h5,
+  .section-dark h6 {
+    color: hsl(0 0% 100%);
+  }
+
+  .section-dark p,
+  .section-dark span:not(.text-primary),
+  .section-dark li {
+    color: hsl(215 20% 75%);
+  }
+
+  /* Light sections: white background, dark text */
   .section-light {
-    background-color: hsl(var(--section-light));
+    background-color: hsl(var(--section-light-bg));
+    color: hsl(var(--foreground));
+  }
+
+  .section-light h1,
+  .section-light h2,
+  .section-light h3,
+  .section-light h4 {
+    color: hsl(var(--foreground));
+  }
+
+  .section-light p {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Service cards on light sections */
+  .section-light .service-card {
+    background-color: hsl(0 0% 100%);
+    border-color: hsl(210 20% 88%);
+  }
+
+  .section-light .service-card h3 {
+    color: hsl(var(--foreground));
+  }
+
+  .section-light .service-card p {
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Service cards on dark sections */
+  .section-dark .service-card {
+    background-color: hsl(215 35% 18%);
+    border-color: hsl(215 30% 24%);
+  }
+
+  .section-dark .service-card h3 {
+    color: hsl(0 0% 100%);
+  }
+
+  .section-dark .service-card p {
+    color: hsl(215 20% 72%);
   }
 
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(0, 85%, 50%), hsl(20, 90%, 55%));
+    background-image: linear-gradient(135deg, hsl(213, 80%, 55%), hsl(200, 90%, 60%));
   }
 
   .hero-overlay {
@@ -88,20 +146,51 @@
   }
 
   .service-card {
-    @apply bg-card border border-border rounded-lg p-6 md:p-8 transition-all duration-300;
+    @apply rounded-lg p-6 md:p-8 transition-all duration-300 border;
   }
 
   .service-card:hover {
-    @apply border-primary/50;
+    border-color: hsl(213 80% 42% / 0.5);
     transform: translateY(-4px);
-    box-shadow: 0 10px 40px -10px hsla(0, 85%, 50%, 0.2);
+    box-shadow: 0 12px 40px -10px hsla(213, 80%, 42%, 0.25);
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-md transition-all duration-300 hover:brightness-110 hover:shadow-lg hover:shadow-primary/25;
+    @apply inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-semibold rounded-md transition-all duration-300 hover:brightness-110 hover:shadow-lg;
+    box-shadow: 0 4px 14px hsla(213, 80%, 42%, 0.3);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-primary text-primary font-semibold rounded-md transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 font-semibold rounded-md transition-all duration-300;
+    border-color: hsl(213 80% 42%);
+    color: hsl(213 80% 42%);
+  }
+
+  .btn-outline:hover {
+    background-color: hsl(213 80% 42%);
+    color: white;
+  }
+
+  /* White outline button for use on dark/hero backgrounds */
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-white/80 text-white font-semibold rounded-md transition-all duration-300;
+  }
+
+  .btn-outline-white:hover {
+    @apply bg-white;
+    color: hsl(215 40% 14%);
+  }
+
+  /* Card for dark sections */
+  .dark-card {
+    background-color: hsl(215 35% 18%);
+    border: 1px solid hsl(215 30% 26%);
+    @apply rounded-xl p-6 md:p-8 transition-all duration-300;
+  }
+
+  .dark-card:hover {
+    border-color: hsl(213 80% 42% / 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px -10px hsla(213, 80%, 42%, 0.2);
   }
 }

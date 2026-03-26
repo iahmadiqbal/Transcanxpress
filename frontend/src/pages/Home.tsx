@@ -57,30 +57,30 @@ const HomePage = () => {
           height={1080}
         />
         <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-5 sm:px-8 text-center">
           <AnimatedSection direction="down" delay={0.1}>
-            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-sm mb-4">
+            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
               Transcan Xpress — Calgary, AB
             </p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight mb-4 sm:mb-6">
               Reliable Trucking &<br />
               Logistics <span className="text-gradient">Services</span>
             </h1>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.4}>
-            <p className="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+            <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mx-auto mb-6 sm:mb-8 px-2">
               Fast, secure, and dependable transportation solutions connecting businesses across Canada.
             </p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.6}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="btn-primary text-base">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">
+              <Link to="/contact" className="btn-primary text-sm sm:text-base w-full sm:w-auto">
                 Contact Us
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Link>
-              <Link to="/services" className="btn-outline-white text-base">
+              <Link to="/services" className="btn-outline-white text-sm sm:text-base w-full sm:w-auto">
                 Explore Services
               </Link>
             </div>
@@ -88,10 +88,10 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Overview — light section */}
+      {/* About Overview */}
       <section className="section-padding section-light">
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             <AnimatedSection direction="right">
               <img
                 src={aboutImg}
@@ -103,17 +103,17 @@ const HomePage = () => {
               />
             </AnimatedSection>
             <AnimatedSection direction="left">
-              <p className="text-primary font-heading font-semibold tracking-widest uppercase text-sm mb-2">About Us</p>
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+              <p className="text-primary font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-2">About Us</p>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-slate-800 mb-4 sm:mb-6">
                 Your Trusted Logistics Partner
               </h2>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="text-slate-600 leading-relaxed mb-4 text-sm sm:text-base">
                 At Transcan Xpress, we provide end-to-end trucking and logistics solutions across Canada. Whether it's local deliveries or long-distance hauls, we ensure safe, reliable, and timely transportation with our experienced team.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-6">
+              <p className="text-slate-600 leading-relaxed mb-6 text-sm sm:text-base">
                 With a commitment to excellence and customer satisfaction, we've built a reputation for delivering more than just goods — we deliver trust.
               </p>
-              <Link to="/about" className="btn-primary text-sm">
+              <Link to="/about" className="btn-primary text-sm w-full sm:w-auto">
                 Learn More About Us
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
@@ -122,34 +122,29 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Overview — dark section */}
+      {/* Services Overview */}
       <section className="section-padding section-dark relative overflow-hidden">
-        {/* Subtle dot-grid pattern overlay */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.06]"
           style={{
-            backgroundImage:
-              "radial-gradient(circle, hsl(213 80% 70%) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, hsl(213 80% 70%) 1px, transparent 1px)",
             backgroundSize: "28px 28px",
           }}
         />
         <div className="container mx-auto relative z-10">
-          <AnimatedSection direction="up" className="text-center mb-12">
-            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-sm mb-2">Our Services</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white">
-              What We Offer
-            </h2>
+          <AnimatedSection direction="up" className="text-center mb-10 sm:mb-12">
+            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-2">Our Services</p>
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white">What We Offer</h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service, i) => (
               <AnimatedSection key={service.title} direction="up" delay={i * 0.1}>
                 <Link
                   to="/services"
                   className="group rounded-xl overflow-hidden border border-white/10 bg-[hsl(215_35%_18%)] hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_hsla(213,80%,42%,0.3)] h-full flex flex-col block"
                 >
-                  {/* Image */}
-                  <div className="relative h-44 overflow-hidden">
+                  <dierflow-hidden">
                     <img
                       src={service.img}
                       alt={service.title}
@@ -158,19 +153,18 @@ const HomePage = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[hsl(215_40%_10%/0.7)] to-transparent" />
                     <div className="absolute bottom-3 left-4">
-                      <service.icon className="w-8 h-8 text-blue-400 drop-shadow" />
+                      <service.icon className="w-7 h-7 sm:w-8 sm:h-8 text-blue-400 drop-shadow" />
                     </div>
                   </div>
-                  {/* Text */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <h3 className="font-heading font-semibold text-lg text-white mb-2">{service.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
+                  <div className="p-4 sm:p-6 flex flex-col flex-1">
+                    <h3 className="font-heading font-semibold text-base sm:text-lg text-white mb-2">{service.title}</h3>
+                    <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{service.desc}</p>
                   </div>
                 </Link>
               </AnimatedSection>
             ))}
           </div>
-          <AnimatedSection direction="up" delay={0.3} className="text-center mt-10">
+          <AnimatedSection direction="up" delay={0.3} className="text-center mt-8 sm:mt-10">
             <Link to="/services" className="btn-outline-white text-sm">
               View All Services
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -179,24 +173,24 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us — light section */}
+      {/* Why Choose Us */}
       <section className="section-padding section-light">
         <div className="container mx-auto">
-          <AnimatedSection direction="up" className="text-center mb-12">
-            <p className="text-primary font-heading font-semibold tracking-widest uppercase text-sm mb-2">Why Choose Us</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-800">
+          <AniName="text-center mb-10 sm:mb-12">
+            <p className="text-primary font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-2">Why Choose Us</p>
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
               The Transcan Xpress Advantage
             </h2>
           </AnimatedSection>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {whyUs.map((item, i) => (
               <AnimatedSection key={item.title} direction="up" delay={i * 0.1}>
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-8 h-8 text-primary" />
+                <div className="text-center p-4 sm:p-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold text-slate-800 mb-2">{item.title}</h3>
-                  <p className="text-slate-500 text-sm">{item.desc}</p>
+                  <h3 className="font-heading font-semibold text-slate-800 mb-2 text-sm sm:text-base">{item.title}</h3>
+                  <p className="text-slate-500 text-xs sm:text-sm">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -204,19 +198,19 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* CTA — dark section */}
+      {/* CTA */}
       <section className="section-padding section-dark">
         <div className="container mx-auto text-center">
           <AnimatedSection direction="scale">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Ship with Us?
             </h2>
-            <p className="text-slate-300 text-lg max-w-xl mx-auto mb-8">
+            <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto mb-6 sm:mb-8 px-4">
               Get in touch today for reliable trucking and logistics solutions tailored to your business.
             </p>
-            <Link to="/contact" className="btn-primary text-base">
+            <Link to="/contact" className="btn-primary text-sm sm:text-base">
               Contact Us
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Link>
           </AnimatedSection>
         </div>

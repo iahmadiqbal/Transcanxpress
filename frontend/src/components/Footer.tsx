@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="/logo.png" alt="Transcan Xpress" className="h-[70px] w-[70px] object-contain bg-white rounded-lg p-2" />
+              <img src="/logo.png" alt="Transcan Xpress" className="h-[70px] w-[70px] object-contain" />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-5">
               Reliable trucking and logistics services across Canada. We deliver trust, safety, and efficiency.

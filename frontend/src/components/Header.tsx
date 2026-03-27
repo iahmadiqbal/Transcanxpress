@@ -41,7 +41,7 @@ const Header = () => {
           <img 
             src="/logo.png" 
             alt="Transcan Xpress" 
-            className="h-[70px] w-[70px] object-contain bg-white rounded-lg p-2"
+            className="h-[70px] w-[70px] object-contain"
           />
         </Link>
 

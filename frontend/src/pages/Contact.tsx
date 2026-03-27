@@ -47,9 +47,9 @@ const ContactPage = () => {
 
       {/* Form + Info — light */}
       <section className="section-padding section-light">
-        <div className="container mx-auto grid md:grid-cols-2 gap-12">
+        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 lg:gap-16">
           <AnimatedSection direction="right">
-            <div className="bg-white border border-slate-100 rounded-xl p-8 shadow-sm">
+            <div className="bg-white border border-slate-100 rounded-xl p-6 sm:p-8 shadow-sm">
               <h2 className="font-heading text-2xl font-bold text-slate-800 mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <div>
@@ -95,7 +95,7 @@ const ContactPage = () => {
                     placeholder="How can we help you?"
                   />
                 </div>
-                <button type="submit" className="btn-primary mt-2">
+                <button type="submit" className="btn-primary mt-2 w-full sm:w-auto">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </button>
@@ -104,30 +104,51 @@ const ContactPage = () => {
           </AnimatedSection>
 
           <AnimatedSection direction="left">
-            <div className="flex flex-col gap-8 pt-2">
+            <div className="flex flex-col gap-6 md:pt-2">
               <div>
-                <h2 className="font-heading text-2xl font-bold text-slate-800 mb-4">Contact Information</h2>
-                <p className="text-slate-500 leading-relaxed">
+                <h2 className="font-heading text-2xl font-bold text-slate-800 mb-3">Contact Information</h2>
+                <p className="text-slate-500 leading-relaxed text-sm sm:text-base">
                   Feel free to reach out to us through phone or visit our office. We're here to help with all your trucking and logistics needs.
                 </p>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-primary" />
+
+              {/* Info cards */}
+              <div className="grid grid-cols-1 gap-4">
+                <div className="flex items-center gap-4 bg-white border border-slate-100 rounded-xl p-4 sm:p-5 shadow-sm">
+                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-slate-800 text-sm mb-0.5">Phone</h3>
+                    <a href="tel:+14035426082" className="text-primary font-medium text-sm hover:underline">
+                      +1 403-542-6082
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-slate-800 mb-1">Phone</h3>
-                  <p className="text-slate-500">+1 403-542-6082</p>
+
+                <div className="flex items-center gap-4 bg-white border border-slate-100 rounded-xl p-4 sm:p-5 shadow-sm">
+                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading font-semibold text-slate-800 text-sm mb-0.5">Address</h3>
+                    <p className="text-slate-500 text-sm">1212 1st Street SE, Calgary AB, T2G 2H8</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-slate-800 mb-1">Address</h3>
-                  <p className="text-slate-500">1212 1st Street SE, Calgary AB, T2G 2H8</p>
-                </div>
+
+              {/* Map embed */}
+              <div className="rounded-xl overflow-hidden border border-slate-100 shadow-sm h-52 sm:h-64 md:h-72 lg:flex-1">
+                <iframe
+                  title="Transcan Xpress Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.5!2d-114.0530!3d51.0430!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53716fc7b0000001%3A0x1!2s1212+1st+St+SE%2C+Calgary%2C+AB+T2G+2H8!5e0!3m2!1sen!2sca!4v1"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </AnimatedSection>

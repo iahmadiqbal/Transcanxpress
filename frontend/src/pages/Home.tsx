@@ -15,7 +15,7 @@ const services = [
     icon: Package,
     title: "Local Delivery",
     desc: "Fast and efficient delivery within cities and nearby areas.",
-    img: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80",
   },
   {
     icon: Snowflake,
@@ -33,7 +33,7 @@ const services = [
     icon: Zap,
     title: "Express Shipping",
     desc: "Priority handling for urgent and time-sensitive shipments.",
-    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=600&q=80",
   },
 ];
 

@@ -19,19 +19,19 @@ const storyItems = [
     icon: Eye,
     title: "Our Purpose",
     text: "To be a trusted logistics partner that businesses can rely on for all their transportation needs, offering personalized solutions with professionalism and care.",
-    img: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80",
   },
   {
     icon: TrendingUp,
     title: "Our Future Vision",
     text: "To expand our fleet and service offerings across Canada, leveraging technology and innovation to become a leading name in the trucking and logistics industry.",
-    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=700&q=80",
   },
   {
     icon: Award,
     title: "Our Experience",
     text: "With extensive experience in the transportation industry, our team understands the complexities of logistics and delivers solutions that meet the unique needs of every client.",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=80",
   },
 ];
 

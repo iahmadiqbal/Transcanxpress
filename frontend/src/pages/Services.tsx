@@ -12,19 +12,19 @@ const services = [
     icon: Package,
     title: "Less Than Truckload (LTL)",
     desc: "Our Less Than Truckload service is designed for smaller shipments that do not require a full truck. Multiple shipments from different customers are combined in one vehicle, helping reduce transportation costs. Despite shared space, we ensure proper handling, tracking, and timely delivery, making it a reliable and economical option for small to medium-sized businesses.",
-    img: "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=700&q=80",
   },
   {
     icon: MapPin,
     title: "Local Delivery",
     desc: "We offer fast and efficient local delivery services within cities and nearby areas. This service is suitable for businesses that require same-day or next-day deliveries. Our team ensures safe handling and timely distribution, making it perfect for retail stores, warehouses, and local suppliers.",
-    img: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=80",
   },
   {
     icon: Route,
     title: "Long Distance Transport",
     desc: "Our long-distance transportation service covers deliveries across regions, provinces, and countries. We focus on maintaining delivery schedules while ensuring the safety of goods during transit. With proper route planning and experienced drivers, we provide reliable logistics solutions for extended distances.",
-    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=700&q=80",
   },
   {
     icon: Snowflake,
@@ -42,13 +42,13 @@ const services = [
     icon: Handshake,
     title: "Freight Brokerage",
     desc: "Our freight brokerage service helps connect customers with reliable carriers. We manage the logistics process, including planning, coordination, and communication, to ensure smooth transportation. This service helps save time, reduce costs, and improve overall efficiency for businesses.",
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80",
   },
   {
     icon: PackageCheck,
     title: "Last-Mile Delivery",
     desc: "We specialize in last-mile delivery, ensuring that goods reach their final destination safely and on time. This is the most critical step in the delivery process, especially for retail and e-commerce businesses. Our focus is on speed, accuracy, and customer satisfaction.",
-    img: "https://images.unsplash.com/photo-1543168256-418811576931?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=700&q=80",
   },
   {
     icon: Cog,
@@ -122,11 +122,11 @@ const ServicesPage = () => {
             backgroundSize: "28px 28px",
           }}
         />
-        <div className="container mx-auto relative z-10 grid sm:grid-cols-2 gap-8">
-          {services.map((service, i) => (
-            <AnimatedSection key={service.title} direction={i % 2 === 0 ? "right" : "left"} delay={(i % 4) * 0.1}>
+        {/* First 9 cards in a clean 3-col grid */}
+        <div className="container mx-auto max-w-7xl relative z-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {services.slice(0, 9).map((service, i) => (
+            <AnimatedSection key={service.title} direction={i % 2 === 0 ? "right" : "left"} delay={(i % 3) * 0.1}>
               <div id={serviceIds[service.title]} className="group rounded-xl overflow-hidden border border-slate-100 bg-white hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_hsla(213,80%,42%,0.2)] h-full flex flex-col shadow-sm">
-                {/* Image */}
                 <div className="relative h-52 overflow-hidden">
                   <img
                     src={service.img}
@@ -136,7 +136,32 @@ const ServicesPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-                {/* Text */}
+                <div className="p-6 flex-1">
+                  <div className="flex items-center gap-3 mb-3">
+                    <service.icon className="w-7 h-7 text-primary flex-shrink-0" />
+                    <h3 className="font-heading font-semibold text-xl text-slate-800">{service.title}</h3>
+                  </div>
+                  <p className="text-slate-500 leading-relaxed text-sm">{service.desc}</p>
+                </div>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        {/* Last card centered on its own row */}
+        <div className="container mx-auto max-w-7xl relative z-10 mt-6 lg:mt-8 flex justify-center">
+          {services.slice(9).map((service) => (
+            <AnimatedSection key={service.title} direction="up" delay={0.1} className="w-full sm:w-1/2 lg:w-1/3">
+              <div id={serviceIds[service.title]} className="group rounded-xl overflow-hidden border border-slate-100 bg-white hover:border-blue-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_40px_-12px_hsla(213,80%,42%,0.2)] h-full flex flex-col shadow-sm">
+                <div className="relative h-52 overflow-hidden">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
                 <div className="p-6 flex-1">
                   <div className="flex items-center gap-3 mb-3">
                     <service.icon className="w-7 h-7 text-primary flex-shrink-0" />

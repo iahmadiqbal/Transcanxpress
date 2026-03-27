@@ -37,16 +37,12 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-heading font-bold text-lg">TX</span>
-          </div>
-          <div>
-            <span className={`font-heading font-bold text-lg ${scrolled ? "text-slate-800" : "text-white"}`}>
-              TRANSCAN
-            </span>
-            <span className="text-primary font-heading font-bold text-lg ml-1">XPRESS</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="Transcan Xpress" 
+            className="h-[70px] w-[70px] object-contain bg-white rounded-lg p-2"
+          />
         </Link>
 
         {/* Desktop Nav */}

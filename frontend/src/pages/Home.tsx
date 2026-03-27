@@ -199,13 +199,13 @@ const HomePage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding section-dark">
+      <section className="section-padding section-light">
         <div className="container mx-auto text-center">
           <AnimatedSection direction="scale">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Ready to Ship with Us?
             </h2>
-            <p className="text-slate-300 text-base sm:text-lg max-w-xl mx-auto mb-6 sm:mb-8 px-4">
+            <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto mb-6 sm:mb-8 px-4">
               Get in touch today for reliable trucking and logistics solutions tailored to your business.
             </p>
             <Link to="/contact" className="btn-primary text-sm sm:text-base">

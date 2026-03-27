@@ -31,7 +31,7 @@ const storyItems = [
     icon: Award,
     title: "Our Experience",
     text: "With extensive experience in the transportation industry, our team understands the complexities of logistics and delivers solutions that meet the unique needs of every client.",
-    img: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80",
   },
 ];
 

@@ -19,15 +19,9 @@ const Footer = () => {
 
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-heading font-bold text-lg">TX</span>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-lg text-white">TRANSCAN</span>
-                <span className="text-blue-400 font-heading font-bold text-lg ml-1">XPRESS</span>
-              </div>
-            </div>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img src="/logo.png" alt="Transcan Xpress" className="h-[70px] w-[70px] object-contain bg-white rounded-lg p-2" />
+            </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-5">
               Reliable trucking and logistics services across Canada. We deliver trust, safety, and efficiency.
             </p>

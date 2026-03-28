@@ -36,12 +36,12 @@ const Header = () => {
           : "bg-slate-900/95 backdrop-blur-md"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
+      <div className="container mx-auto flex items-center justify-between py-1 px-4">
         <Link to="/" className="flex items-center gap-3">
           <img 
             src="/logo.png" 
             alt="Transcan Xpress" 
-            className="h-[70px] w-[70px] object-contain"
+            className="h-[90px] w-[90px] object-contain"
           />
         </Link>
 

@@ -15,7 +15,7 @@ const services = [
     icon: Package,
     title: "Local Delivery",
     desc: "Fast and efficient delivery within cities and nearby areas.",
-    img: "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=80",
   },
   {
     icon: Snowflake,
@@ -27,7 +27,7 @@ const services = [
     icon: Warehouse,
     title: "Warehousing",
     desc: "Secure and flexible storage solutions for your business needs.",
-    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
+    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=600&q=80",
   },
   {
     icon: Zap,
@@ -174,23 +174,35 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding section-light">
-        <div className="container mx-auto">
-          <AnimatedSection direction="up" className="text-center mb-10 sm:mb-12">
-            <p className="text-primary font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-2">Why Choose Us</p>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800">
+      <section className="section-padding section-light relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(213 80% 42%) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+        <div className="container mx-auto relative z-10">
+          <AnimatedSection direction="up" className="text-center mb-12 sm:mb-16">
+            <p className="text-primary font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3">Why Choose Us</p>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-slate-800 mb-4">
               The Transcan Xpress Advantage
             </h2>
+            <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
+              Experience the difference with our commitment to excellence in every delivery
+            </p>
           </AnimatedSection>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {whyUs.map((item, i) => (
               <AnimatedSection key={item.title} direction="up" delay={i * 0.1}>
-                <div className="text-center p-4 sm:p-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                <div className="group bg-white rounded-xl border border-slate-100 p-6 sm:p-8 text-center shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-blue-200 transition-all duration-300 h-full flex flex-col">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
                   </div>
-                  <h3 className="font-heading font-semibold text-slate-800 mb-2 text-sm sm:text-base">{item.title}</h3>
-                  <p className="text-slate-500 text-xs sm:text-sm">{item.desc}</p>
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-slate-800 mb-3">{item.title}</h3>
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -199,19 +211,43 @@ const HomePage = () => {
       </section>
 
       {/* CTA */}
-      <section className="section-padding section-light">
-        <div className="container mx-auto text-center">
+      <section className="section-padding bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+        {/* Background patterns */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.06]"
+          style={{
+            backgroundImage: "radial-gradient(circle, hsl(213 80% 70%) 1px, transparent 1px)",
+            backgroundSize: "28px 28px",
+          }}
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(45deg, hsl(213 80% 60%) 0px, hsl(213 80% 60%) 1px, transparent 1px, transparent 40px)",
+          }}
+        />
+        <div className="container mx-auto text-center relative z-10">
           <AnimatedSection direction="scale">
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Ready to Ship with Us?
-            </h2>
-            <p className="text-slate-600 text-base sm:text-lg max-w-xl mx-auto mb-6 sm:mb-8 px-4">
-              Get in touch today for reliable trucking and logistics solutions tailored to your business.
-            </p>
-            <Link to="/contact" className="btn-primary text-sm sm:text-base">
-              Contact Us
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-            </Link>
+            <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+                Ready to Ship with Us?
+              </h2>
+              <p className="text-slate-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed">
+                Get in touch today for reliable trucking and logistics solutions tailored to your business needs. Our team is ready to help you move forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link to="/contact" className="btn-primary text-base sm:text-lg px-8 py-4 w-full sm:w-auto shadow-lg hover:shadow-xl">
+                  Contact Us Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link to="/services" className="btn-outline-white text-base sm:text-lg px-8 py-4 w-full sm:w-auto">
+                  View Our Services
+                </Link>
+              </div>
+            </div>
           </AnimatedSection>
         </div>
       </section>

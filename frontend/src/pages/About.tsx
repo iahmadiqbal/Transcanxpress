@@ -19,19 +19,19 @@ const storyItems = [
     icon: Eye,
     title: "Our Purpose",
     text: "To be a trusted logistics partner that businesses can rely on for all their transportation needs, offering personalized solutions with professionalism and care.",
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&q=80",
   },
   {
     icon: TrendingUp,
     title: "Our Future Vision",
     text: "To expand our fleet and service offerings across Canada, leveraging technology and innovation to become a leading name in the trucking and logistics industry.",
-    img: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80",
   },
   {
     icon: Award,
     title: "Our Experience",
     text: "With extensive experience in the transportation industry, our team understands the complexities of logistics and delivers solutions that meet the unique needs of every client.",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=700&q=80",
   },
 ];
 
@@ -42,7 +42,7 @@ const AboutPage = () => {
       {/* Page Header — hero image + dot-grid pattern */}
       <section className="relative py-40 md:py-52 flex items-center justify-center overflow-hidden text-center">
         <img
-          src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=1600&q=80"
+          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80"
           alt="Transcan Xpress trucks"
           className="absolute inset-0 w-full h-full object-cover"
         />

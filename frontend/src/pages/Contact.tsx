@@ -17,7 +17,7 @@ const ContactPage = () => {
       {/* Page Header — hero image + dot-grid pattern */}
       <section className="relative py-40 md:py-52 flex items-center justify-center overflow-hidden text-center">
         <img
-          src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600&q=80"
+          src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600&q=80"
           alt="Contact Transcan Xpress"
           className="absolute inset-0 w-full h-full object-cover"
         />

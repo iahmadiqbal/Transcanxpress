@@ -30,10 +30,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-md"
-          : isHome
-          ? "bg-transparent"
-          : "bg-slate-900/95 backdrop-blur-md"
+          ? "bg-white shadow-md"
+          : "bg-white"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between h-14 md:h-16 px-4">
@@ -54,9 +52,7 @@ const Header = () => {
               className={`font-medium transition-colors duration-200 hover:text-primary ${
                 location.pathname === link.path
                   ? "text-primary"
-                  : scrolled
-                  ? "text-slate-700"
-                  : "text-white"
+                  : "text-slate-700"
               }`}
             >
               {link.name}
@@ -71,7 +67,7 @@ const Header = () => {
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden p-2 ${scrolled ? "text-slate-800" : "text-white"}`}
+          className="md:hidden p-2 text-slate-800"
           aria-label="Toggle menu"
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

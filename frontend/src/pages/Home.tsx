@@ -58,11 +58,6 @@ const HomePage = () => {
         />
         <div className="absolute inset-0 hero-overlay" />
         <div className="relative z-10 container mx-auto px-5 sm:px-8 text-center">
-          <AnimatedSection direction="down" delay={0.1}>
-            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">
-              Transcan Xpress — Calgary, AB
-            </p>
-          </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
             <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight mb-4 sm:mb-6">
               Reliable Trucking &<br />

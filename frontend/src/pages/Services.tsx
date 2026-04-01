@@ -48,19 +48,19 @@ const services = [
     icon: PackageCheck,
     title: "Last-Mile Delivery",
     desc: "We specialize in last-mile delivery, ensuring that goods reach their final destination safely and on time. This is the most critical step in the delivery process, especially for retail and e-commerce businesses. Our focus is on speed, accuracy, and customer satisfaction.",
-    img: "https://images.unsplash.com/photo-1586521995568-39abaa0c2311?w=700&q=80",
+    img: "/images/Last-Mile Delivery.png",
   },
   {
     icon: Cog,
     title: "Heavy Equipment Transport",
     desc: "We provide specialized transportation for heavy machinery and oversized equipment. This includes construction equipment, industrial machines, and large loads that require special handling. Our team ensures proper loading, securing, and safe delivery using suitable vehicles and techniques.",
-    img: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=700&q=80",
+    img: "/images/Heavy Equipment Transport.png",
   },
   {
     icon: Zap,
     title: "Express / Expedited Shipping",
     desc: "For urgent deliveries, we offer express shipping services with priority handling. This ensures that time-sensitive shipments are delivered as quickly as possible. It is ideal for critical business needs where delays are not acceptable.",
-    img: "https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=700&q=80",
+    img: "/images/ExpressExpedited Shipping.png",
   },
 ];
 
@@ -81,13 +81,13 @@ const ServicesPage = () => {
   return (
     <div>
       {/* Page Header — hero image + dot-grid pattern */}
-      <section className="relative py-40 md:py-52 flex items-center justify-center overflow-hidden text-center">
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden text-center">
         <img
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80"
+          src="/images/Transcanwebsiteheroimage.png"
           alt="Transcan Xpress services"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[hsl(215_40%_10%/0.78)]" />
+        <div className="absolute inset-0 bg-[hsl(215_40%_10%/0.65)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -96,15 +96,17 @@ const ServicesPage = () => {
             backgroundSize: "28px 28px",
           }}
         />
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10 container mx-auto px-5 sm:px-8">
           <AnimatedSection direction="down">
-            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-sm mb-2">Our Services</p>
+            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">Our Services</p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.1}>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">What We Offer</h1>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6">
+              What We Offer
+            </h1>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
-            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-3xl mx-auto leading-relaxed px-4">
               Comprehensive trucking and logistics solutions tailored to meet your business needs.
             </p>
           </AnimatedSection>

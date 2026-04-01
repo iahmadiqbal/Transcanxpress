@@ -13,13 +13,13 @@ const storyItems = [
     icon: Target,
     title: "Our Mission",
     text: "To provide safe, efficient, and reliable trucking services that help businesses grow by ensuring their goods reach their destinations on time, every time.",
-    img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=80",
+    img: "/images/ourmission.png",
   },
   {
     icon: Eye,
     title: "Our Purpose",
     text: "To be a trusted logistics partner that businesses can rely on for all their transportation needs, offering personalized solutions with professionalism and care.",
-    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=700&q=80",
+    img: "/images/ourpurpose.png",
   },
   {
     icon: TrendingUp,
@@ -40,13 +40,13 @@ const AboutPage = () => {
     <div>
 
       {/* Page Header — hero image + dot-grid pattern */}
-      <section className="relative py-40 md:py-52 flex items-center justify-center overflow-hidden text-center">
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden text-center">
         <img
-          src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1600&q=80"
+          src="/images/AboutUs.png"
           alt="Transcan Xpress trucks"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[hsl(215_40%_10%/0.78)]" />
+        <div className="absolute inset-0 bg-[hsl(215_40%_10%/0.65)]" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -55,15 +55,17 @@ const AboutPage = () => {
             backgroundSize: "28px 28px",
           }}
         />
-        <div className="relative z-10 container mx-auto px-4">
+        <div className="relative z-10 container mx-auto px-5 sm:px-8">
           <AnimatedSection direction="down">
-            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-sm mb-2">About Us</p>
+            <p className="text-blue-400 font-heading font-semibold tracking-widest uppercase text-xs sm:text-sm mb-3 sm:mb-4">About Us</p>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.1}>
-            <h1 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Who We Are</h1>
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 sm:mb-6">
+              Who We Are
+            </h1>
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
-            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+            <p className="text-slate-300 text-base sm:text-lg md:text-xl max-w-xl sm:max-w-3xl mx-auto leading-relaxed px-4">
               A dedicated team committed to delivering excellence in trucking and logistics services.
             </p>
           </AnimatedSection>
